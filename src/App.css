@@ -1,0 +1,48 @@
+:root {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: #1f2937;
+  background: #f3f5f9;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.app { max-width: 1200px; margin: 0 auto; padding: 24px; display: grid; gap: 16px; }
+
+.app-header h1 { margin: 0 0 4px; font-size: 1.6rem; }
+.app-header p { margin: 0; color: #6b7280; }
+
+.card { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 1px 3px rgb(0 0 0 / 8%); }
+
+.dropzone {
+  display: grid; gap: 6px; justify-items: center; padding: 28px;
+  border: 2px dashed #9ca3af; border-radius: 10px; cursor: pointer; text-align: center;
+}
+.dropzone:hover { border-color: #1f4e78; }
+.dropzone input { max-width: 100%; }
+.file-meta { color: #4b5563; font-size: 0.9rem; }
+
+.error { color: #b91c1c; background: #fee2e2; padding: 10px 12px; border-radius: 6px; margin: 12px 0 0; }
+
+.report-toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; justify-content: space-between; margin-bottom: 16px; }
+.title-field { display: grid; gap: 4px; flex: 1 1 420px; font-size: 0.9rem; color: #4b5563; }
+.title-field input { padding: 8px 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 0.95rem; }
+
+.export-buttons { display: flex; gap: 8px; }
+.export-buttons button {
+  padding: 9px 16px; border: 0; border-radius: 6px; cursor: pointer;
+  background: #1f4e78; color: #fff; font-weight: 600;
+}
+.export-buttons button.secondary { background: #217346; }
+.export-buttons button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.table-wrap { overflow-x: auto; }
+.report-title { text-align: center; font-size: 1.05rem; margin: 0 0 12px; }
+
+.report-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.report-table th, .report-table td { border: 1px solid #d1d5db; padding: 5px 8px; }
+.report-table th { background: #1f4e78; color: #fff; }
+.report-table td.text { text-align: left; }
+.report-table td.number, .report-table th.number { text-align: right; }
+.report-table .row-subtotal td { background: #ddebf7; font-weight: 700; }
+.report-table .row-grand td { background: #bdd7ee; font-weight: 700; }
